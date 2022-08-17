@@ -1,5 +1,25 @@
+# 3. Skapa en egendefinerad funktion antal_kameror(plats_data) som räknar ihop antal kameror i
+# varje kommun, sorterar resultatet i alfabetisk ordning efter kommun och presenterar resultatet
+# som en tabell. Ni behöver inte ta hänsyn till om å, ä och ö sorteras fel, det kan bero på felaktig
+# ordning i aktuell teckenkodning. I slutet ska även det totala antalet kameror summeras. Avsluta
+# uppgiften med ett huvudprogram som visar att din funktion fungerar korrekt. Tabellen ska
+# strukturellt se ut som nedan (obs värdena nedan är på denna deluppgift bara påhittade, så att
+# du själv får träna på att kontrollera att dina resultat verkar stämma):
+#    Kommun      Antal kameror
+#    ---------------------------
+#    Alingsås          17
+#    Bengtsfors         4
+#    Essunga           10
+#    Falköping         28
+#     ...
+#    Vara               7
+#    Vänersborg        20
+#    Vårgårda          13
+#    ---------------------------
+#    Det finns totalt 297 kameror.
+
 def antal_kameror(plats_data):
-    data = read_file(plats_data)
+    data = plats_data
 
     kommuner = []
 
@@ -22,4 +42,8 @@ def antal_kameror(plats_data):
     print(f'Det finns totalt {summa} kameror.')
 
 
-antal_kameror('platsData.csv')
+def main():
+    antal_kameror(platsdata)
+
+
+main()
